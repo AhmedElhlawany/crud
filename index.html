@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    
+    <link rel="stylesheet" href="webfonts/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-black">
+    
+    <div class="home">
+
+        <div class="container w-75 m-auto">
+            <h1 class="mb-3 text-center">Product Managment System</h1>
+            <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" type="text" class="form-control" id="productname" placeholder="product name">
+                <div class="alert alert-danger p-1 mt-2 d-none">
+                    <small>productname is not correct</small>
+                </div>
+                
+                <label for="productname">product name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" type="number" class="form-control" id="productprice" placeholder="product price">
+                <div class="alert alert-danger p-1 mt-2 d-none">
+                    <small>productprice is not correct</small>
+                </div>
+                <label for="productprice">product price</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" list="categories" type="text" class="form-control" id="productcat" placeholder="product category">
+                <div class="alert alert-danger p-1 mt-2 d-none">
+                    <small>productcategory is not correct</small>
+                </div>
+                <label for="productcat">product category</label>
+                <datalist id="categories">
+                    <option value="TV" />
+                    <option value="Mobile" />
+                    <option value="laptop" />
+                    <option value="screens" />
+                    <option value="others" />
+                </datalist>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea oninput="validateProductInput(this)" class="form-control" id="productdesc" placeholder="productdesc"></textarea>
+                <div class="alert alert-danger p-1 mt-2 d-none">
+                    <small>productdescription is not correct</small>
+                </div>
+                <label for="productdesc">Product Description</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="file" class="form-control" id="productImage" placeholder="product Image">
+                <label for="productImage">product Image</label>
+              </div>
+              <button id="addbtn" onclick="addproduct()" class="btn btn-primary mt-2 disabled" >Add Product</button>
+              <button id="updatebtn" onclick="updateproduct()" class="btn btn-info mt-2 d-none">Update Product</button>
+        </div>
+        <div class="div text-start mb-3 w-75 m-auto">
+            <label class="ms-2 mt-2 text-white fs-3" for="searchname">Search <i class="fa-solid fa-magnifying-glass"></i></label>
+            <input id="searchname" class="form-control w-100 m-1" type="text" oninput="search(this.value)" placeholder="search">
+        </div>
+        <div class="container py-5">
+            <div class="row gy-4" id="mydata">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
