@@ -73,7 +73,7 @@ function updateInputValue(config) {
 productPrice.value = config ? config.price : null;
 productCategory.value = config ? config.category : null;
 productDesc.value = config ? config.desc : null;
-// productImage.value = config ? config.image : null;
+
 }
 
 function getDataToUpdate(index) {
@@ -90,6 +90,7 @@ productList[currentIndex].name = productName.value;
 productList[currentIndex].price = productPrice.value;
 productList[currentIndex].category = productCategory.value;
 productList[currentIndex].desc = productDesc.value;
+
 displayproduct(productList);
 
 updatebtn.classList.add("d-none")
