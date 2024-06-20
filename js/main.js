@@ -73,7 +73,7 @@ function updateInputValue(config) {
 productPrice.value = config ? config.price : null;
 productCategory.value = config ? config.category : null;
 productDesc.value = config ? config.desc : null;
-productImage.value = config ? config.image : null;
+// productImage.value = config ? config.image : null;
 }
 
 function getDataToUpdate(index) {
@@ -120,7 +120,7 @@ for (var i=0; i< productList.length; i++){
 
 function validateProductInput(element){
     var regex= {
-        productname: /^[A-Z][a-z0-9]{5,8}$/,
+        productname: /^[A-Za-z0-9]{5,8}$/,
         productprice: /^([1-9][0-9]|100)$/,
         productdesc: /.{10}/,
         productcat: /(TV|Mobile|laptop|screens|others)/i
@@ -129,12 +129,12 @@ function validateProductInput(element){
    element.nextElementSibling.classList.add('d-none')
     element.classList.add("is-valid")
     element.classList.remove("is-invalid")
-        addbtn.classList.remove("disabled")
+        
     }else{
         element.nextElementSibling.classList.remove('d-none')
         element.classList.remove("is-valid")
         element.classList.add("is-invalid")
-        addbtn.classList.add("disabled")
+       
     }
     
 }
